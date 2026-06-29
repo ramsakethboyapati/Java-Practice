@@ -1,11 +1,12 @@
 package Dsa;
 
-public class RemoveDuplicate {
+public class MajorityElement {
 	
 	public void majority(int arr[],int majoritySize) {
 		int count=0;
 		
 		for(int i=0;i<arr.length;i++) {
+			count=0;
 			boolean visited=false;
 			for(int k=0;k<i;k++) {
 				if(arr[i]==arr[k]) {
@@ -27,13 +28,14 @@ public class RemoveDuplicate {
 			}
 			
 		}
+		System.out.println("No majority element");
 		
 	}
 
 	public static void main(String[] args) {
-		int arr[]= {1,3,3,9,0,47,3,3,3};
+		int arr[]= {1,3,9,9,47,9,9,9};
 		int majoritySize=arr.length/2;
-		RemoveDuplicate r= new RemoveDuplicate();
+		MajorityElement r= new MajorityElement();
 		r.majority(arr,majoritySize);
 		
 		
